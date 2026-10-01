@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicos",
+  "info": {
+    "singularName": "servico",
+    "pluralName": "servicos",
+    "displayName": "Serviço",
+    "description": "Cards exibidos na seção de destaques da landing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descricao": {
+      "type": "text",
+      "required": true
+    },
+    "icone": {
+      "type": "enumeration",
+      "enum": ["foguete", "grafico", "escudo", "codigo", "pincel", "suporte", "nuvem", "coracao"],
+      "default": "foguete"
+    },
+    "imagem": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "ordem": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

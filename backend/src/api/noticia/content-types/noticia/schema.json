@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "noticias",
+  "info": {
+    "singularName": "noticia",
+    "pluralName": "noticias",
+    "displayName": "Notícia",
+    "description": "Matérias exibidas na página de notícias"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo",
+      "required": true
+    },
+    "resumo": {
+      "type": "text",
+      "maxLength": 280
+    },
+    "capa": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": ["Empresa", "Tecnologia", "Mercado", "Eventos", "Dicas"],
+      "default": "Empresa"
+    },
+    "autor": {
+      "type": "string",
+      "default": "Equipe de Comunicação"
+    },
+    "conteudo": {
+      "type": "blocks"
+    }
+  }
+}

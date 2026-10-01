@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagina_inicial",
+  "info": {
+    "singularName": "pagina-inicial",
+    "pluralName": "paginas-iniciais",
+    "displayName": "Página Inicial",
+    "description": "Textos e imagem do topo (hero) e da seção de destaques da landing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heroEtiqueta": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "heroTitulo": {
+      "type": "string",
+      "required": true
+    },
+    "heroSubtitulo": {
+      "type": "text"
+    },
+    "heroImagem": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "botaoTexto": {
+      "type": "string",
+      "default": "Fale com a gente"
+    },
+    "secaoTitulo": {
+      "type": "string"
+    },
+    "secaoSubtitulo": {
+      "type": "text"
+    }
+  }
+}
